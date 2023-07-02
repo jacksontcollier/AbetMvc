@@ -6,7 +6,7 @@ var connectionString = builder.Configuration.GetConnectionString("AbetMvcIdentit
 
 builder.Services.AddDbContext<AbetMvcIdentityDbContext>(options => options.UseSqlite(connectionString));
 
-builder.Services.AddDefaultIdentity<Instructor>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<AbetMvcIdentityDbContext>();
+builder.Services.AddDefaultIdentity<Instructor>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<AbetMvcIdentityDbContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
