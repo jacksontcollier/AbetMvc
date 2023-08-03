@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using AbetMvc.Areas.Identity.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("AbetMvcIdentityDbContextConnection") ?? throw new InvalidOperationException("Connection string 'AbetMvcIdentityDbContextConnection' not found.");
 
