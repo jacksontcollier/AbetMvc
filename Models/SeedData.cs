@@ -55,7 +55,7 @@ public static class SeedData
             );
 
             // Samuel Adams User
-            Instructor samAdams = 
+            Instructor samuelAdams = 
             CreateInstructorIfNotExist(
                 context,
                 "Samuel", "Adams", "sadams", "SADAMS",
@@ -130,6 +130,35 @@ public static class SeedData
             CreateSectionIfNotExist(context, benjaminFranklin, softwareEngineering, Semester.Spring, 2019);
             CreateSectionIfNotExist(context, benjaminFranklin, systemsProgramming, Semester.Spring, 2020);
             CreateSectionIfNotExist(context, benjaminFranklin, csDesignPracticum, Semester.Spring, 2019);
+
+            // John Adams User
+            CreateSectionIfNotExist(context, johnAdams , softwareEngineering, Semester.Spring, 2019);
+            CreateSectionIfNotExist(context, johnAdams , systemsProgramming, Semester.Spring, 2019);
+            CreateSectionIfNotExist(context, johnAdams , systemsProgramming, Semester.Fall, 2019);
+            CreateSectionIfNotExist(context, johnAdams , csJuniorSeminar, Semester.Fall, 2020);
+
+            // Thomas Jefferson User
+            CreateSectionIfNotExist(context,  thomasJefferson, introLogicDesign, Semester.Spring, 2019);
+            CreateSectionIfNotExist(context,  thomasJefferson, computerInterfaces, Semester.Spring, 2019);
+            CreateSectionIfNotExist(context,  thomasJefferson, electronicDevices, Semester.Fall, 2019);
+            CreateSectionIfNotExist(context,  thomasJefferson, fundamentalsCommunications, Semester.Fall, 2020);
+            CreateSectionIfNotExist(context,  thomasJefferson, digitalSystemsDesign, Semester.Spring, 2020);
+
+            // Samuel Adams User
+            CreateSectionIfNotExist(context, samuelAdams, signalsAndSystems, Semester.Spring, 2019);
+            CreateSectionIfNotExist(context, samuelAdams, signalsAndSystems, Semester.Fall, 2019);
+            CreateSectionIfNotExist(context, samuelAdams, electricEnergy, Semester.Spring, 2020);
+            CreateSectionIfNotExist(context, samuelAdams, fundamentalsCommunications, Semester.Spring, 2020);
+            CreateSectionIfNotExist(context, samuelAdams, eceDesignPracticum, Semester.Fall, 2020);
+            CreateSectionIfNotExist(context, samuelAdams, eceJuniorSeminar, Semester.Fall, 2020);
+
+            // Henry Knox User
+            CreateSectionIfNotExist(context, henryKnox, introLogicDesign, Semester.Fall, 2019);
+            CreateSectionIfNotExist(context, henryKnox, introLogicDesign, Semester.Fall, 2020);
+            CreateSectionIfNotExist(context, henryKnox, computerInterfaces, Semester.Fall, 2020);
+            CreateSectionIfNotExist(context, henryKnox, electronicDevices, Semester.Spring, 2019);
+            CreateSectionIfNotExist(context, henryKnox, fundamentalsCommunications, Semester.Spring, 2020);
+            CreateSectionIfNotExist(context, henryKnox, digitalSystemsDesign, Semester.Fall, 2019);
         }
     }
 
