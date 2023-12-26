@@ -1,19 +1,29 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using AbetMvc.Data;
 using AbetMvc.Areas.Identity.Data;
+using AbetMvc.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("AbetMvcIdentityDbContextConnection") ?? throw new InvalidOperationException("Connection string 'AbetMvcIdentityDbContextConnection' not found.");
 
-builder.Services.AddDbContext<AbetMvcIdentityDbContext>(options => options.UseSqlite(connectionString));
+builder.Services.AddDbContext<AbetMvcDbContext>(options => options.UseSqlite(connectionString));
 
-builder.Services.AddDefaultIdentity<Instructor>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<AbetMvcIdentityDbContext>();
+builder.Services.AddDefaultIdentity<Instructor>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<AbetMvcDbContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
+if (app.Environment.IsDevelopment())
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var services = scope.ServiceProvider;
+        SeedData.Initialize(services);
+    }
+}
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -27,10 +37,12 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapRazorPages();
 
 app.Run();

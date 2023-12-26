@@ -1,0 +1,27 @@
+@using Microsoft.AspNetCore.Identity
+@using AbetMvc.Areas.Identity.Data
+
+@inject UserManager<Instructor> UserManager
+
+@model IEnumerable<AbetMvc.Models.SectionViewModel>
+
+@{
+    ViewData["Title"] = "Section Page";
+    var Instructor = await UserManager.GetUserAsync(User);
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @(Instructor.FirstName) @(Instructor.LastName)</h1>
+    <p>Your sections are:</p>
+    <ul>
+        @foreach (var section in Model)
+        {
+            <li>
+                @Html.DisplayFor(modelItem => section.Course.Id),
+                @Html.DisplayFor(modelItem => section.Course.Title),
+                @Html.DisplayFor(modelItem => section.SemesterString),
+                @Html.DisplayFor(modelItem => section.Section.Year)
+            </li>
+        }
+    </ul>
+</div>
