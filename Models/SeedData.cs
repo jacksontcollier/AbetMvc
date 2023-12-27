@@ -159,6 +159,78 @@ public static class SeedData
             CreateSectionIfNotExist(context, henryKnox, electronicDevices, Semester.Spring, 2019);
             CreateSectionIfNotExist(context, henryKnox, fundamentalsCommunications, Semester.Spring, 2020);
             CreateSectionIfNotExist(context, henryKnox, digitalSystemsDesign, Semester.Fall, 2019);
+
+            // CS Outcomes
+            CreateOutcomeIfNotExist(context, 1, Major.CS,
+                "Analyze a complex computing problem and to apply principles of computing " +
+                "and other relevant disciplines to identify solutions");
+            CreateOutcomeIfNotExist(context, 2, Major.CS,
+                "Design, implement, and evaluate a computing-based solution to meet a " +
+                "given set of computing requirements in the context of the program\'s " +
+                "discipline");
+            CreateOutcomeIfNotExist(context, 3, Major.CS,
+                "Communicate effectively in a variety of professional contexts");
+            CreateOutcomeIfNotExist(context, 4, Major.CS,
+                "Recognize professional responsibilities and make informed judgements in " +
+                "computing practice based on legal and ethical principles");
+            CreateOutcomeIfNotExist(context, 5, Major.CS,
+                "Function effectively as a member or leader of a team engaged in " +
+                "activities appropriate to the program's discipline");
+            CreateOutcomeIfNotExist(context, 6, Major.CS,
+                "Apply computer science theory and software development fundamentals to " +
+                "produce computing-based solutions");
+
+            // EE Outcomes
+            CreateOutcomeIfNotExist(context, 1, Major.EE,
+                "An ability to identify, formulate, and solve complex engineering problems " +
+                "by applying principles of engineering, science, and mathematics");
+            CreateOutcomeIfNotExist(context, 2, Major.EE,
+                "An ability to apply engineering design to produce solutions that meet " +
+                "specified needs with consideration of public health, safety, and welfare, " +
+                "as well as global, cultural, social, environmental, and economic factors");
+            CreateOutcomeIfNotExist(context, 3, Major.EE, 
+                "An ability to communicate effectively with a range of audiences");
+            CreateOutcomeIfNotExist(context, 4, Major.EE, 
+                "An ability to recognize ethical and professional responsibilities in " +
+                "engineering situations and make informed judgements, which must consider " +
+                "the impact of engineering solutions in global, economic, environmental, " +
+                "and societal contexts" );
+            CreateOutcomeIfNotExist(context, 5, Major.EE, 
+                "An ability to function effectively on a team whose members together " +
+                "provide leadership, create a collaborative and inclusive environment, " +
+                "establish goals, plan tasks, and meet objectives");
+            CreateOutcomeIfNotExist(context, 6, Major.EE,
+                "An ability to develop and conduct appropriate experimentation, analyze " +
+                "and interpret data, and use engineering judgement to draw conclusions");
+            CreateOutcomeIfNotExist(context, 7, Major.EE,
+                "An ability to acquire and apply new knowledge as needed, using appropriate " +
+                "learning strategies");
+
+            // CpE Outcomes
+            CreateOutcomeIfNotExist(context, 1, Major.CpE,
+                "An ability to identify, formulate, and solve complex engineering problems " +
+                "by applying principles of engineering, science, and mathematics");
+            CreateOutcomeIfNotExist(context, 2, Major.CpE,
+                "An ability to apply engineering design to produce solutions that meet " +
+                "specified needs with consideration of public health, safety, and welfare, " +
+                "as well as global, cultural, social, environmental, and economic factors");
+            CreateOutcomeIfNotExist(context, 3, Major.CpE,
+                "An ability to communicate effectively with a range of audiences");
+            CreateOutcomeIfNotExist(context, 4, Major.CpE,
+                "An ability to recognize ethical and professional responsibilities in " +
+                "engineering situations and make informed judgements, which must consider " +
+                "the impact of engineering solutions in global, economic, environmental, " +
+                "and societal contexts");
+            CreateOutcomeIfNotExist(context, 5, Major.CpE,
+                "An ability to function effectively on a team whose members together " +
+                "provide leadership, create a collaborative and inclusive environment, " +
+                "establish goals, plan tasks, and meet objectives");
+            CreateOutcomeIfNotExist(context, 6, Major.CpE,
+                "An ability to develop and conduct appropriate experimentation, analyze " +
+                "and interpret data, and use engineering judgement to draw conclusions");
+            CreateOutcomeIfNotExist(context, 7, Major.CpE,
+                "An ability to acquire and apply new knowledge as needed, using appropriate " +
+                "learning strategies");
         }
     }
 
@@ -228,6 +300,20 @@ public static class SeedData
 
         Section section = new Section{Instructor=instructor,Course=course,Semester=semester,Year=year};
         dbContext.Sections.Add(section);
+        dbContext.SaveChanges();
+    }
+
+    public static void CreateOutcomeIfNotExist(AbetMvcDbContext dbContext, int outcomeNumber, Major outcomeMajor,
+            string outcomeDescription)
+    {
+        if (dbContext.Outcomes.Where(o => ( ( o.Number == outcomeNumber)
+            && ( o.Major == outcomeMajor ) ) ).Any() )
+        {
+            return;
+        }
+
+        Outcome outcome = new Outcome{Number=outcomeNumber,Major=outcomeMajor,Description=outcomeDescription};
+        dbContext.Outcomes.Add(outcome);
         dbContext.SaveChanges();
     }
 }
