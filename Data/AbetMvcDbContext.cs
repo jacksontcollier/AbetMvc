@@ -17,6 +17,8 @@ public class AbetMvcDbContext : IdentityDbContext<Instructor>
     public DbSet<Course> Courses { get; set; }
     public DbSet<Section> Sections { get; set; }
 
+    public DbSet<Outcome> Outcomes { get; set; }
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
