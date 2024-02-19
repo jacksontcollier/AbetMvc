@@ -19,6 +19,13 @@ public class AbetMvcDbContext : IdentityDbContext<Instructor>
 
     public DbSet<Outcome> Outcomes { get; set; }
 
+<<<<<<< Updated upstream
+=======
+    public DbSet<OutcomeResult> OutcomeResults { get; set; }
+
+    public DbSet<CourseOutcomeMapping> CourseOutcomeMappings { get; set; }
+
+>>>>>>> Stashed changes
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);

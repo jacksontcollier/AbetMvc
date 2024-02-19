@@ -3,6 +3,7 @@ using System;
 using AbetMvc.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AbetMvc.Migrations
 {
     [DbContext(typeof(AbetMvcDbContext))]
-    partial class AbetMvcIdentityDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240218200430_AddCourseOutcomeMapping")]
+    partial class AddCourseOutcomeMapping
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.8");
@@ -89,25 +92,15 @@ namespace AbetMvc.Migrations
                     b.HasData(
                         new
                         {
-<<<<<<< Updated upstream
-                            Id = "eb7d3964-f9f0-4c28-a841-f064d7adee98",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "6f6bde8a-07e8-4e42-a4ba-22216684e836",
-=======
                             Id = "c6c78390-84da-4ea1-a2d2-9a48c9fda596",
                             AccessFailedCount = 0,
                             ConcurrencyStamp = "b0813a24-fd18-46cc-a901-08f35aca4937",
->>>>>>> Stashed changes
                             Email = "gwashington@fakemail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             PhoneNumber = "1234567890",
                             PhoneNumberConfirmed = false,
-<<<<<<< Updated upstream
-                            SecurityStamp = "b390b8a4-85fe-4fd2-a31a-2dbec5d1907c",
-=======
                             SecurityStamp = "7e2a7c12-8893-4e93-ac9b-f88730306c28",
->>>>>>> Stashed changes
                             TwoFactorEnabled = false,
                             UserName = "gwashington"
                         });
@@ -177,6 +170,37 @@ namespace AbetMvc.Migrations
                         .IsUnique();
 
                     b.ToTable("Outcomes");
+                });
+
+            modelBuilder.Entity("AbetMvc.Models.OutcomeResult", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Major")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<short>("NumberOfStudents")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("OutcomeId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PerformanceLevel")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("SectionId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OutcomeId");
+
+                    b.HasIndex("SectionId", "OutcomeId", "PerformanceLevel", "Major")
+                        .IsUnique();
+
+                    b.ToTable("OutcomeResults");
                 });
 
             modelBuilder.Entity("AbetMvc.Models.Section", b =>
@@ -338,8 +362,6 @@ namespace AbetMvc.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-<<<<<<< Updated upstream
-=======
             modelBuilder.Entity("AbetMvc.Models.CourseOutcomeMapping", b =>
                 {
                     b.HasOne("AbetMvc.Models.Course", "Course")
@@ -370,7 +392,6 @@ namespace AbetMvc.Migrations
                     b.Navigation("Section");
                 });
 
->>>>>>> Stashed changes
             modelBuilder.Entity("AbetMvc.Models.Section", b =>
                 {
                     b.HasOne("AbetMvc.Models.Course", "Course")

@@ -120,117 +120,654 @@ public static class SeedData
 
 
             // George Washington Sections
-            CreateSectionIfNotExist(context, georgeWashington, algorithmAnalysis, Semester.Spring, 2019);
-            CreateSectionIfNotExist(context, georgeWashington, algorithmAnalysis, Semester.Fall, 2019);
-            CreateSectionIfNotExist(context, georgeWashington, systemsProgramming, Semester.Spring, 2020);
-            CreateSectionIfNotExist(context, georgeWashington, csDesignPracticum, Semester.Spring, 2020);
+            Section gwSection1 = CreateSectionIfNotExist(context,
+                    georgeWashington, algorithmAnalysis, Semester.Spring, 2019);
+            Section gwSection2 = CreateSectionIfNotExist(context,
+                    georgeWashington, algorithmAnalysis, Semester.Fall, 2019);
+            Section gwSection3 = CreateSectionIfNotExist(context,
+                    georgeWashington, systemsProgramming, Semester.Spring,
+                    2020);
+            Section gwSection4 = CreateSectionIfNotExist(context,
+                    georgeWashington, csDesignPracticum, Semester.Spring, 2020);
 
             // Benjamin Franklin Sections
-            CreateSectionIfNotExist(context, benjaminFranklin, algorithmAnalysis, Semester.Spring, 2018);
-            CreateSectionIfNotExist(context, benjaminFranklin, softwareEngineering, Semester.Spring, 2019);
-            CreateSectionIfNotExist(context, benjaminFranklin, systemsProgramming, Semester.Spring, 2020);
-            CreateSectionIfNotExist(context, benjaminFranklin, csDesignPracticum, Semester.Spring, 2019);
+            Section bfSection1 = CreateSectionIfNotExist(context,
+                    benjaminFranklin, algorithmAnalysis, Semester.Spring, 2018);
+            Section bfSection2 = CreateSectionIfNotExist(context,
+                    benjaminFranklin, softwareEngineering, Semester.Spring, 2019);
+            Section bfSection3 = CreateSectionIfNotExist(context,
+                    benjaminFranklin, systemsProgramming, Semester.Spring, 2020);
+            Section bfSection4 = CreateSectionIfNotExist(context,
+                    benjaminFranklin, csDesignPracticum, Semester.Spring, 2019);
 
             // John Adams User
-            CreateSectionIfNotExist(context, johnAdams , softwareEngineering, Semester.Spring, 2019);
-            CreateSectionIfNotExist(context, johnAdams , systemsProgramming, Semester.Spring, 2019);
-            CreateSectionIfNotExist(context, johnAdams , systemsProgramming, Semester.Fall, 2019);
-            CreateSectionIfNotExist(context, johnAdams , csJuniorSeminar, Semester.Fall, 2020);
+            Section jaSection1 = CreateSectionIfNotExist(context,
+                    johnAdams, softwareEngineering, Semester.Spring, 2019);
+            Section jaSection2 = CreateSectionIfNotExist(context,
+                    johnAdams, systemsProgramming, Semester.Spring, 2019);
+            Section jaSection3 = CreateSectionIfNotExist(context,
+                    johnAdams, systemsProgramming, Semester.Fall, 2019);
+            Section jaSection4 = CreateSectionIfNotExist(context,
+                    johnAdams, csJuniorSeminar, Semester.Fall, 2020);
 
             // Thomas Jefferson User
-            CreateSectionIfNotExist(context,  thomasJefferson, introLogicDesign, Semester.Spring, 2019);
-            CreateSectionIfNotExist(context,  thomasJefferson, computerInterfaces, Semester.Spring, 2019);
-            CreateSectionIfNotExist(context,  thomasJefferson, electronicDevices, Semester.Fall, 2019);
-            CreateSectionIfNotExist(context,  thomasJefferson, fundamentalsCommunications, Semester.Fall, 2020);
-            CreateSectionIfNotExist(context,  thomasJefferson, digitalSystemsDesign, Semester.Spring, 2020);
+            Section tjSection1 = CreateSectionIfNotExist(context,
+                    thomasJefferson, introLogicDesign, Semester.Spring, 2019);
+            Section tjSection2 = CreateSectionIfNotExist(context,
+                    thomasJefferson, computerInterfaces, Semester.Spring, 2019);
+            Section tjSection3 = CreateSectionIfNotExist(context,
+                    thomasJefferson, electronicDevices, Semester.Fall, 2019);
+            Section tjSection4 = CreateSectionIfNotExist(context,
+                    thomasJefferson, fundamentalsCommunications, Semester.Fall, 2020);
+            Section tjSection5 = CreateSectionIfNotExist(context,
+                    thomasJefferson, digitalSystemsDesign, Semester.Spring, 2020);
 
             // Samuel Adams User
-            CreateSectionIfNotExist(context, samuelAdams, signalsAndSystems, Semester.Spring, 2019);
-            CreateSectionIfNotExist(context, samuelAdams, signalsAndSystems, Semester.Fall, 2019);
-            CreateSectionIfNotExist(context, samuelAdams, electricEnergy, Semester.Spring, 2020);
-            CreateSectionIfNotExist(context, samuelAdams, fundamentalsCommunications, Semester.Spring, 2020);
-            CreateSectionIfNotExist(context, samuelAdams, eceDesignPracticum, Semester.Fall, 2020);
-            CreateSectionIfNotExist(context, samuelAdams, eceJuniorSeminar, Semester.Fall, 2020);
+            Section saSection1 = CreateSectionIfNotExist(context,
+                    samuelAdams, signalsAndSystems, Semester.Spring, 2019);
+            Section saSection2 = CreateSectionIfNotExist(context,
+                    samuelAdams, signalsAndSystems, Semester.Fall, 2019);
+            Section saSection3 = CreateSectionIfNotExist(context,
+                    samuelAdams, electricEnergy, Semester.Spring, 2020);
+            Section saSection4 = CreateSectionIfNotExist(context,
+                    samuelAdams, fundamentalsCommunications, Semester.Spring, 2020);
+            Section saSection5 = CreateSectionIfNotExist(context,
+                    samuelAdams, eceDesignPracticum, Semester.Fall, 2020);
+            Section saSection6 = CreateSectionIfNotExist(context,
+                    samuelAdams, eceJuniorSeminar, Semester.Fall, 2020);
 
             // Henry Knox User
-            CreateSectionIfNotExist(context, henryKnox, introLogicDesign, Semester.Fall, 2019);
-            CreateSectionIfNotExist(context, henryKnox, introLogicDesign, Semester.Fall, 2020);
-            CreateSectionIfNotExist(context, henryKnox, computerInterfaces, Semester.Fall, 2020);
-            CreateSectionIfNotExist(context, henryKnox, electronicDevices, Semester.Spring, 2019);
-            CreateSectionIfNotExist(context, henryKnox, fundamentalsCommunications, Semester.Spring, 2020);
-            CreateSectionIfNotExist(context, henryKnox, digitalSystemsDesign, Semester.Fall, 2019);
+            Section hkSection1 = CreateSectionIfNotExist(context,
+                    henryKnox, introLogicDesign, Semester.Fall, 2019);
+            Section hkSection2 = CreateSectionIfNotExist(context,
+                    henryKnox, introLogicDesign, Semester.Fall, 2020);
+            Section hkSection3 = CreateSectionIfNotExist(context,
+                    henryKnox, computerInterfaces, Semester.Fall, 2020);
+            Section hkSection4 = CreateSectionIfNotExist(context,
+                    henryKnox, electronicDevices, Semester.Spring, 2019);
+            Section hkSection5 = CreateSectionIfNotExist(context,
+                    henryKnox, fundamentalsCommunications, Semester.Spring, 2020);
+            Section hkSection6 = CreateSectionIfNotExist(context,
+                    henryKnox, digitalSystemsDesign, Semester.Fall, 2019);
 
             // CS Outcomes
-            CreateOutcomeIfNotExist(context, 1, Major.CS,
+            Outcome csOutcome1 = CreateOutcomeIfNotExist(context, 1, Major.CS,
                 "Analyze a complex computing problem and to apply principles of computing " +
                 "and other relevant disciplines to identify solutions");
-            CreateOutcomeIfNotExist(context, 2, Major.CS,
+            Outcome csOutcome2 = CreateOutcomeIfNotExist(context, 2, Major.CS,
                 "Design, implement, and evaluate a computing-based solution to meet a " +
                 "given set of computing requirements in the context of the program\'s " +
                 "discipline");
-            CreateOutcomeIfNotExist(context, 3, Major.CS,
+            Outcome csOutcome3 = CreateOutcomeIfNotExist(context, 3, Major.CS,
                 "Communicate effectively in a variety of professional contexts");
-            CreateOutcomeIfNotExist(context, 4, Major.CS,
+            Outcome csOutcome4 = CreateOutcomeIfNotExist(context, 4, Major.CS,
                 "Recognize professional responsibilities and make informed judgements in " +
                 "computing practice based on legal and ethical principles");
-            CreateOutcomeIfNotExist(context, 5, Major.CS,
+            Outcome csOutcome5 = CreateOutcomeIfNotExist(context, 5, Major.CS,
                 "Function effectively as a member or leader of a team engaged in " +
                 "activities appropriate to the program's discipline");
-            CreateOutcomeIfNotExist(context, 6, Major.CS,
+            Outcome csOutcome6 = CreateOutcomeIfNotExist(context, 6, Major.CS,
                 "Apply computer science theory and software development fundamentals to " +
                 "produce computing-based solutions");
 
             // EE Outcomes
-            CreateOutcomeIfNotExist(context, 1, Major.EE,
+            Outcome eeOutcome1 = CreateOutcomeIfNotExist(context, 1, Major.EE,
                 "An ability to identify, formulate, and solve complex engineering problems " +
                 "by applying principles of engineering, science, and mathematics");
-            CreateOutcomeIfNotExist(context, 2, Major.EE,
+            Outcome eeOutcome2 = CreateOutcomeIfNotExist(context, 2, Major.EE,
                 "An ability to apply engineering design to produce solutions that meet " +
                 "specified needs with consideration of public health, safety, and welfare, " +
                 "as well as global, cultural, social, environmental, and economic factors");
-            CreateOutcomeIfNotExist(context, 3, Major.EE, 
+            Outcome eeOutcome3 = CreateOutcomeIfNotExist(context, 3, Major.EE, 
                 "An ability to communicate effectively with a range of audiences");
-            CreateOutcomeIfNotExist(context, 4, Major.EE, 
+            Outcome eeOutcome4 = CreateOutcomeIfNotExist(context, 4, Major.EE, 
                 "An ability to recognize ethical and professional responsibilities in " +
                 "engineering situations and make informed judgements, which must consider " +
                 "the impact of engineering solutions in global, economic, environmental, " +
                 "and societal contexts" );
-            CreateOutcomeIfNotExist(context, 5, Major.EE, 
+            Outcome eeOutcome5 = CreateOutcomeIfNotExist(context, 5, Major.EE, 
                 "An ability to function effectively on a team whose members together " +
                 "provide leadership, create a collaborative and inclusive environment, " +
                 "establish goals, plan tasks, and meet objectives");
-            CreateOutcomeIfNotExist(context, 6, Major.EE,
+            Outcome eeOutcome6 = CreateOutcomeIfNotExist(context, 6, Major.EE,
                 "An ability to develop and conduct appropriate experimentation, analyze " +
                 "and interpret data, and use engineering judgement to draw conclusions");
-            CreateOutcomeIfNotExist(context, 7, Major.EE,
+            Outcome eeOutcome7 = CreateOutcomeIfNotExist(context, 7, Major.EE,
                 "An ability to acquire and apply new knowledge as needed, using appropriate " +
                 "learning strategies");
 
             // CpE Outcomes
-            CreateOutcomeIfNotExist(context, 1, Major.CpE,
+            Outcome cpeOutcome1 = CreateOutcomeIfNotExist(context, 1, Major.CpE,
                 "An ability to identify, formulate, and solve complex engineering problems " +
                 "by applying principles of engineering, science, and mathematics");
-            CreateOutcomeIfNotExist(context, 2, Major.CpE,
+            Outcome cpeOutcome2 = CreateOutcomeIfNotExist(context, 2, Major.CpE,
                 "An ability to apply engineering design to produce solutions that meet " +
                 "specified needs with consideration of public health, safety, and welfare, " +
                 "as well as global, cultural, social, environmental, and economic factors");
-            CreateOutcomeIfNotExist(context, 3, Major.CpE,
+            Outcome cpeOutcome3 = CreateOutcomeIfNotExist(context, 3, Major.CpE,
                 "An ability to communicate effectively with a range of audiences");
-            CreateOutcomeIfNotExist(context, 4, Major.CpE,
+            Outcome cpeOutcome4 = CreateOutcomeIfNotExist(context, 4, Major.CpE,
                 "An ability to recognize ethical and professional responsibilities in " +
                 "engineering situations and make informed judgements, which must consider " +
                 "the impact of engineering solutions in global, economic, environmental, " +
                 "and societal contexts");
-            CreateOutcomeIfNotExist(context, 5, Major.CpE,
+            Outcome cpeOutcome5 = CreateOutcomeIfNotExist(context, 5, Major.CpE,
                 "An ability to function effectively on a team whose members together " +
                 "provide leadership, create a collaborative and inclusive environment, " +
                 "establish goals, plan tasks, and meet objectives");
-            CreateOutcomeIfNotExist(context, 6, Major.CpE,
+            Outcome cpeOutcome6 = CreateOutcomeIfNotExist(context, 6, Major.CpE,
                 "An ability to develop and conduct appropriate experimentation, analyze " +
                 "and interpret data, and use engineering judgement to draw conclusions");
-            CreateOutcomeIfNotExist(context, 7, Major.CpE,
+            Outcome cpeOutcome7 = CreateOutcomeIfNotExist(context, 7, Major.CpE,
                 "An ability to acquire and apply new knowledge as needed, using appropriate " +
                 "learning strategies");
+
+            // Outcome Results for CS, George Washington's First Section
+            CreateOutcomeResultIfNotExist(context, gwSection1, csOutcome1, Major.CS,
+                PerformanceLevel.NotMeetsExpectations, 10);
+            CreateOutcomeResultIfNotExist(context, gwSection1, csOutcome1, Major.CS,
+                PerformanceLevel.MeetsExpectations, 30);
+            CreateOutcomeResultIfNotExist(context, gwSection1, csOutcome1, Major.CS,
+                PerformanceLevel.ExceedsExpectations, 40);
+            CreateOutcomeResultIfNotExist(context, gwSection1, csOutcome2, Major.CS,
+                PerformanceLevel.NotMeetsExpectations, 40);
+            CreateOutcomeResultIfNotExist(context, gwSection1, csOutcome2, Major.CS,
+                PerformanceLevel.MeetsExpectations, 30);
+            CreateOutcomeResultIfNotExist(context, gwSection1, csOutcome2, Major.CS,
+                PerformanceLevel.ExceedsExpectations, 10);
+            CreateOutcomeResultIfNotExist(context, gwSection1, csOutcome3, Major.CS,
+                PerformanceLevel.NotMeetsExpectations, 16);
+            CreateOutcomeResultIfNotExist(context, gwSection1, csOutcome3, Major.CS,
+                PerformanceLevel.MeetsExpectations, 54);
+            CreateOutcomeResultIfNotExist(context, gwSection1, csOutcome3, Major.CS,
+                PerformanceLevel.ExceedsExpectations, 10);
+   
+            // Outcome Results for CS, George Washington's Second Section 
+            CreateOutcomeResultIfNotExist(context, gwSection2, csOutcome1, Major.CS,
+                PerformanceLevel.NotMeetsExpectations, 10);
+            CreateOutcomeResultIfNotExist(context, gwSection2, csOutcome1, Major.CS,
+                PerformanceLevel.MeetsExpectations, 20);
+            CreateOutcomeResultIfNotExist(context, gwSection2, csOutcome1, Major.CS,
+                PerformanceLevel.ExceedsExpectations, 30);
+            CreateOutcomeResultIfNotExist(context, gwSection2, csOutcome2, Major.CS,
+                PerformanceLevel.NotMeetsExpectations, 20);
+            CreateOutcomeResultIfNotExist(context, gwSection2, csOutcome2, Major.CS,
+                PerformanceLevel.MeetsExpectations, 30);
+            CreateOutcomeResultIfNotExist(context, gwSection2, csOutcome2, Major.CS,
+                PerformanceLevel.ExceedsExpectations, 10);
+
+            // Outcome Results for CS, George Washington's Third Section
+            CreateOutcomeResultIfNotExist(context, gwSection3, csOutcome2, Major.CS,
+                PerformanceLevel.NotMeetsExpectations, 80);
+            CreateOutcomeResultIfNotExist(context, gwSection3, csOutcome2, Major.CS,
+                PerformanceLevel.MeetsExpectations, 30);
+            CreateOutcomeResultIfNotExist(context, gwSection3, csOutcome2, Major.CS,
+                PerformanceLevel.ExceedsExpectations, 60);
+
+            // Outcome Results for CS, George Washington's Fourth Section
+            CreateOutcomeResultIfNotExist(context, gwSection4, csOutcome1, Major.CS,
+                PerformanceLevel.NotMeetsExpectations, 20);
+            CreateOutcomeResultIfNotExist(context, gwSection4, csOutcome1, Major.CS,
+                PerformanceLevel.MeetsExpectations, 50);
+            CreateOutcomeResultIfNotExist(context, gwSection4, csOutcome1, Major.CS,
+                PerformanceLevel.ExceedsExpectations, 70);
+            CreateOutcomeResultIfNotExist(context, gwSection4, csOutcome2, Major.CS,
+                PerformanceLevel.NotMeetsExpectations, 30);
+            CreateOutcomeResultIfNotExist(context, gwSection4, csOutcome2, Major.CS,
+                PerformanceLevel.MeetsExpectations, 60);
+            CreateOutcomeResultIfNotExist(context, gwSection4, csOutcome2, Major.CS,
+                PerformanceLevel.ExceedsExpectations, 50);
+            CreateOutcomeResultIfNotExist(context, gwSection4, csOutcome3, Major.CS,
+                PerformanceLevel.NotMeetsExpectations, 10);
+            CreateOutcomeResultIfNotExist(context, gwSection4, csOutcome3, Major.CS,
+                PerformanceLevel.MeetsExpectations, 80);
+            CreateOutcomeResultIfNotExist(context, gwSection4, csOutcome3, Major.CS,
+                PerformanceLevel.ExceedsExpectations, 50);
+
+            // Outcome Results for CS, Benjamin Franklin's First Section
+            CreateOutcomeResultIfNotExist(context, bfSection1, csOutcome1, Major.CS,
+                PerformanceLevel.NotMeetsExpectations, 20);
+            CreateOutcomeResultIfNotExist(context, bfSection1, csOutcome1, Major.CS,
+                PerformanceLevel.MeetsExpectations, 40);
+            CreateOutcomeResultIfNotExist(context, bfSection1, csOutcome1, Major.CS,
+                PerformanceLevel.ExceedsExpectations, 30);
+            CreateOutcomeResultIfNotExist(context, bfSection1, csOutcome2, Major.CS,
+                PerformanceLevel.NotMeetsExpectations, 30);
+            CreateOutcomeResultIfNotExist(context, bfSection1, csOutcome2, Major.CS,
+                PerformanceLevel.MeetsExpectations, 40);
+            CreateOutcomeResultIfNotExist(context, bfSection1, csOutcome2, Major.CS,
+                PerformanceLevel.ExceedsExpectations, 20);
+            CreateOutcomeResultIfNotExist(context, bfSection1, csOutcome3, Major.CS,
+                PerformanceLevel.NotMeetsExpectations, 5);
+            CreateOutcomeResultIfNotExist(context, bfSection1, csOutcome3, Major.CS,
+                PerformanceLevel.MeetsExpectations, 55);
+            CreateOutcomeResultIfNotExist(context, bfSection1, csOutcome3, Major.CS,
+                PerformanceLevel.ExceedsExpectations, 30);
+
+            // Outcome Results for CpE, Benjamin Franklin's Second Section
+            CreateOutcomeResultIfNotExist(context, bfSection2, cpeOutcome1, Major.CpE,
+                PerformanceLevel.NotMeetsExpectations, 20);
+            CreateOutcomeResultIfNotExist(context, bfSection2, cpeOutcome1, Major.CpE,
+                PerformanceLevel.MeetsExpectations, 10);
+            CreateOutcomeResultIfNotExist(context, bfSection2, cpeOutcome1, Major.CpE,
+                PerformanceLevel.ExceedsExpectations, 60);
+            CreateOutcomeResultIfNotExist(context, bfSection2, cpeOutcome2, Major.CpE,
+                PerformanceLevel.NotMeetsExpectations, 25);
+            CreateOutcomeResultIfNotExist(context, bfSection2, cpeOutcome2, Major.CpE,
+                PerformanceLevel.MeetsExpectations, 55);
+            CreateOutcomeResultIfNotExist(context, bfSection2, cpeOutcome2, Major.CpE,
+                PerformanceLevel.ExceedsExpectations, 10);
+
+            // Outcome Results for EE, Sam Adam's First Section
+            CreateOutcomeResultIfNotExist(context, saSection1, cpeOutcome1, Major.EE,
+                PerformanceLevel.NotMeetsExpectations, 20);
+            CreateOutcomeResultIfNotExist(context, saSection1, cpeOutcome1, Major.EE,
+                PerformanceLevel.MeetsExpectations, 10);
+            CreateOutcomeResultIfNotExist(context, saSection1, cpeOutcome1, Major.EE,
+                PerformanceLevel.ExceedsExpectations, 60);
+            CreateOutcomeResultIfNotExist(context, saSection1, eeOutcome2, Major.EE,
+                PerformanceLevel.NotMeetsExpectations, 25);
+            CreateOutcomeResultIfNotExist(context, saSection1, eeOutcome2, Major.EE,
+                PerformanceLevel.MeetsExpectations, 55);
+            CreateOutcomeResultIfNotExist(context, saSection1, eeOutcome2, Major.EE,
+                PerformanceLevel.ExceedsExpectations, 10);
+
+            // Outcome Results for John Adam's First Section
+            CreateOutcomeResultIfNotExist(context, jaSection1, csOutcome1, Major.CS,
+                PerformanceLevel.NotMeetsExpectations, 10);
+            CreateOutcomeResultIfNotExist(context, jaSection1, csOutcome1, Major.CS,
+                PerformanceLevel.MeetsExpectations, 40);
+            CreateOutcomeResultIfNotExist(context, jaSection1, csOutcome1, Major.CS,
+                PerformanceLevel.ExceedsExpectations, 80);
+
+            // ** START Seed CourseOutcomeMapping **//
+            CreateCourseOutcomeMappingIfNotExist(context, algorithmAnalysis, csOutcome6, Major.CS, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, algorithmAnalysis, csOutcome6, Major.CS, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, algorithmAnalysis, csOutcome6, Major.CS, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, algorithmAnalysis, csOutcome6, Major.CS, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, algorithmAnalysis, csOutcome6, Major.CS, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, algorithmAnalysis, csOutcome6, Major.CS, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, algorithmAnalysis, csOutcome6, Major.CS, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome2, Major.CS, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome2, Major.CS, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome2, Major.CS, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome2, Major.CS, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome2, Major.CS, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome2, Major.CS, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome2, Major.CS, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome3, Major.CS, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome3, Major.CS, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome3, Major.CS, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome3, Major.CS, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome3, Major.CS, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome3, Major.CS, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome3, Major.CS, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome5, Major.CS, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome5, Major.CS, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome5, Major.CS, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome5, Major.CS, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome5, Major.CS, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome5, Major.CS, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome5, Major.CS, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome6, Major.CS, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome6, Major.CS, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome6, Major.CS, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome6, Major.CS, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome6, Major.CS, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome6, Major.CS, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, softwareEngineering, csOutcome6, Major.CS, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, systemsProgramming, csOutcome1, Major.CS, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, systemsProgramming, csOutcome1, Major.CS, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, systemsProgramming, csOutcome1, Major.CS, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, systemsProgramming, csOutcome1, Major.CS, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, systemsProgramming, csOutcome1, Major.CS, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, systemsProgramming, csOutcome1, Major.CS, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, systemsProgramming, csOutcome1, Major.CS, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, programmingLanguages, csOutcome1, Major.CS, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, programmingLanguages, csOutcome1, Major.CS, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, programmingLanguages, csOutcome1, Major.CS, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, programmingLanguages, csOutcome1, Major.CS, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, programmingLanguages, csOutcome1, Major.CS, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, programmingLanguages, csOutcome1, Major.CS, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, programmingLanguages, csOutcome1, Major.CS, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, csJuniorSeminar, csOutcome4, Major.CS, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, csJuniorSeminar, csOutcome4, Major.CS, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, csJuniorSeminar, csOutcome4, Major.CS, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, csJuniorSeminar, csOutcome4, Major.CS, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, csJuniorSeminar, csOutcome4, Major.CS, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, csJuniorSeminar, csOutcome4, Major.CS, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, csJuniorSeminar, csOutcome4, Major.CS, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome2, Major.CS, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome2, Major.CS, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome2, Major.CS, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome2, Major.CS, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome2, Major.CS, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome2, Major.CS, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome2, Major.CS, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome3, Major.CS, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome3, Major.CS, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome3, Major.CS, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome3, Major.CS, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome3, Major.CS, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome3, Major.CS, Semester.Fall, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome3, Major.CS, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome4, Major.CS, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome4, Major.CS, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome4, Major.CS, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome4, Major.CS, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome4, Major.CS, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome4, Major.CS, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome4, Major.CS, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome5, Major.CS, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome5, Major.CS, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome5, Major.CS, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome5, Major.CS, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome5, Major.CS, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome5, Major.CS, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, csDesignPracticum, csOutcome5, Major.CS, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, introLogicDesign, cpeOutcome6, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, introLogicDesign, cpeOutcome6, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, introLogicDesign, cpeOutcome6, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, introLogicDesign, cpeOutcome6, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, introLogicDesign, cpeOutcome6, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, introLogicDesign, cpeOutcome6, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, introLogicDesign, cpeOutcome6, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, cpeOutcome1, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, cpeOutcome1, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, cpeOutcome1, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, cpeOutcome1, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, cpeOutcome1, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, cpeOutcome1, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, cpeOutcome1, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, cpeOutcome6, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, cpeOutcome6, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, cpeOutcome6, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, cpeOutcome6, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, cpeOutcome6, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, cpeOutcome6, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, cpeOutcome6, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, cpeOutcome1, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, cpeOutcome1, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, cpeOutcome1, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, cpeOutcome1, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, cpeOutcome1, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, cpeOutcome1, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, cpeOutcome1, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, cpeOutcome3, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, cpeOutcome3, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, cpeOutcome3, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, cpeOutcome3, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, cpeOutcome3, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, cpeOutcome3, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, cpeOutcome3, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome1, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome1, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome1, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome1, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome1, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome1, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome1, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome2, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome2, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome2, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome2, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome2, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome2, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome2, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome6, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome6, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome6, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome6, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome6, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome6, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, cpeOutcome6, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, cpeOutcome1, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, cpeOutcome1, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, cpeOutcome1, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, cpeOutcome1, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, cpeOutcome1, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, cpeOutcome1, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, cpeOutcome1, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, cpeOutcome3, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, cpeOutcome3, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, cpeOutcome3, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, cpeOutcome3, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, cpeOutcome3, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, cpeOutcome3, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, cpeOutcome3, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome1, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome1, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome1, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome1, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome1, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome1, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome1, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome2, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome2, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome2, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome2, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome2, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome2, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome2, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome5, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome5, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome5, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome5, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome5, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome5, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome5, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome6, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome6, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome6, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome6, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome6, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome6, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, digitalSystemsDesign, cpeOutcome6, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome1, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome1, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome1, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome1, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome1, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome1, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome1, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome4, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome4, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome4, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome4, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome4, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome4, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome4, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome7, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome7, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome7, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome7, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome7, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome7, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, cpeOutcome7, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome2, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome2, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome2, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome2, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome2, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome2, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome2, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome3, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome3, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome3, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome3, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome3, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome3, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome3, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome4, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome4, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome4, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome4, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome4, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome4, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome4, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome5, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome5, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome5, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome5, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome5, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome5, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome5, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome7, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome7, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome7, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome7, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome7, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome7, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, cpeOutcome7, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, systemsProgramming, cpeOutcome1, Major.CpE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, systemsProgramming, cpeOutcome1, Major.CpE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, systemsProgramming, cpeOutcome1, Major.CpE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, systemsProgramming, cpeOutcome1, Major.CpE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, systemsProgramming, cpeOutcome1, Major.CpE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, systemsProgramming, cpeOutcome1, Major.CpE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, systemsProgramming, cpeOutcome1, Major.CpE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, introLogicDesign, eeOutcome2, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, introLogicDesign, eeOutcome2, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, introLogicDesign, eeOutcome2, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, introLogicDesign, eeOutcome2, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, introLogicDesign, eeOutcome2, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, introLogicDesign, eeOutcome2, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, introLogicDesign, eeOutcome2, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, eeOutcome1, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, eeOutcome1, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, eeOutcome1, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, eeOutcome1, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, eeOutcome1, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, eeOutcome1, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, eeOutcome1, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, eeOutcome6, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, eeOutcome6, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, eeOutcome6, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, eeOutcome6, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, eeOutcome6, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, eeOutcome6, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, computerInterfaces, eeOutcome6, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, eeOutcome1, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, eeOutcome1, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, eeOutcome1, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, eeOutcome1, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, eeOutcome1, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, eeOutcome1, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, eeOutcome1, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, eeOutcome3, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, eeOutcome3, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, eeOutcome3, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, eeOutcome3, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, eeOutcome3, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, eeOutcome3, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, signalsAndSystems, eeOutcome3, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome2, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome2, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome2, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome2, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome2, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome2, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome2, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome5, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome5, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome5, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome5, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome5, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome5, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome5, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome6, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome6, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome6, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome6, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome6, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome6, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electricEnergy, eeOutcome6, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome1, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome1, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome1, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome1, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome1, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome1, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome1, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome2, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome2, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome2, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome2, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome2, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome2, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome2, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome6, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome6, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome6, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome6, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome6, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome6, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, electronicDevices, eeOutcome6, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, eeOutcome1, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, eeOutcome1, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, eeOutcome1, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, eeOutcome1, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, eeOutcome1, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, eeOutcome1, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, eeOutcome1, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, eeOutcome3, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, eeOutcome3, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, eeOutcome3, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, eeOutcome3, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, eeOutcome3, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, eeOutcome3, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, fundamentalsCommunications, eeOutcome3, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, eeOutcome4, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, eeOutcome4, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, eeOutcome4, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, eeOutcome4, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, eeOutcome4, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, eeOutcome4, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, eeOutcome4, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, eeOutcome7, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, eeOutcome7, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, eeOutcome7, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, eeOutcome7, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, eeOutcome7, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, eeOutcome7, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceJuniorSeminar, eeOutcome7, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome2, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome2, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome2, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome2, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome2, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome2, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome2, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome3, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome3, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome3, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome3, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome3, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome3, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome3, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome4, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome4, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome4, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome4, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome4, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome4, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome4, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome5, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome5, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome5, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome5, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome5, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome5, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome5, Major.EE, Semester.Spring, 2021);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome7, Major.EE, Semester.Spring, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome7, Major.EE, Semester.Fall, 2018);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome7, Major.EE, Semester.Spring, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome7, Major.EE, Semester.Fall, 2019);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome7, Major.EE, Semester.Spring, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome7, Major.EE, Semester.Fall, 2020);
+            CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome7, Major.EE, Semester.Spring, 2021);
+            // ** END   Seed CourseOutcomeMapping **//
+ 
         }
     }
 
@@ -289,31 +826,76 @@ public static class SeedData
         return course;
     }
 
-    public static void CreateSectionIfNotExist(AbetMvcDbContext dbContext,
+    public static Section CreateSectionIfNotExist(AbetMvcDbContext dbContext,
             Instructor instructor, Course course, Semester semester, int year)
     {
-        if (dbContext.Sections.Where(s => ( (s.Instructor == instructor) &&
-            (s.Course == course) && (s.Semester == semester)) ).Any())
+        IEnumerable<Section> sectionQuery = dbContext.Sections.Where(
+                s => ( (s.Instructor == instructor) &&
+                (s.Course == course) && (s.Semester == semester)) );
+
+        if (sectionQuery.Any())
         {
-            return;
+            return sectionQuery.First();
         }
 
         Section section = new Section{Instructor=instructor,Course=course,Semester=semester,Year=year};
         dbContext.Sections.Add(section);
         dbContext.SaveChanges();
+
+        return section;
     }
 
-    public static void CreateOutcomeIfNotExist(AbetMvcDbContext dbContext, int outcomeNumber, Major outcomeMajor,
-            string outcomeDescription)
+    public static Outcome CreateOutcomeIfNotExist(AbetMvcDbContext dbContext,
+            int outcomeNumber, Major outcomeMajor, string outcomeDescription)
     {
-        if (dbContext.Outcomes.Where(o => ( ( o.Number == outcomeNumber)
-            && ( o.Major == outcomeMajor ) ) ).Any() )
+        IEnumerable<Outcome> outcomeQuery =  dbContext.Outcomes.Where(
+            o => ( ( o.Number == outcomeNumber)
+            && ( o.Major == outcomeMajor ) ) );
+
+        if (outcomeQuery.Any())
         {
-            return;
+            return outcomeQuery.First();
         }
 
         Outcome outcome = new Outcome{Number=outcomeNumber,Major=outcomeMajor,Description=outcomeDescription};
         dbContext.Outcomes.Add(outcome);
+        dbContext.SaveChanges();
+
+        return outcome;
+    }
+
+    public static void CreateOutcomeResultIfNotExist(AbetMvcDbContext dbContext, Section section,
+            Outcome outcome, Major major, PerformanceLevel performanceLevel, short numberOfStudents)
+    {
+        if (dbContext.OutcomeResults.Where( or => ( ( or.SectionId == section.Id &&
+                or.OutcomeId == outcome.Id && or.Major == major &&
+                or.PerformanceLevel == performanceLevel && or.NumberOfStudents == numberOfStudents))).Any())
+        {
+            return;
+        }
+
+        OutcomeResult outcomeResult = new OutcomeResult{Section=section,Outcome=outcome,
+                Major=major,PerformanceLevel=performanceLevel,
+                NumberOfStudents=numberOfStudents};
+        dbContext.OutcomeResults.Add(outcomeResult);
+        dbContext.SaveChanges();
+    }
+
+    public static void CreateCourseOutcomeMappingIfNotExist(AbetMvcDbContext dbContext,
+        Course course, Outcome outcome, Major major, Semester semester, int year)
+    {
+        if (dbContext.CourseOutcomeMappings.Where( com => ( ( com.Course.Id == course.Id &&
+            com.Outcome.Id == outcome.Id && com.Major == major && com.Semester == semester &&
+            com.Year == year))).Any())
+        {
+            return;
+        }
+
+        CourseOutcomeMapping com = new CourseOutcomeMapping{
+            Course=course,Outcome=outcome,Major=major,Semester=semester,Year=year
+        };
+
+        dbContext.CourseOutcomeMappings.Add(com);
         dbContext.SaveChanges();
     }
 }
