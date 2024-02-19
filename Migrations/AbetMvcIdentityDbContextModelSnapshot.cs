@@ -89,25 +89,15 @@ namespace AbetMvc.Migrations
                     b.HasData(
                         new
                         {
-<<<<<<< Updated upstream
                             Id = "eb7d3964-f9f0-4c28-a841-f064d7adee98",
                             AccessFailedCount = 0,
                             ConcurrencyStamp = "6f6bde8a-07e8-4e42-a4ba-22216684e836",
-=======
-                            Id = "c6c78390-84da-4ea1-a2d2-9a48c9fda596",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "b0813a24-fd18-46cc-a901-08f35aca4937",
->>>>>>> Stashed changes
                             Email = "gwashington@fakemail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             PhoneNumber = "1234567890",
                             PhoneNumberConfirmed = false,
-<<<<<<< Updated upstream
                             SecurityStamp = "b390b8a4-85fe-4fd2-a31a-2dbec5d1907c",
-=======
-                            SecurityStamp = "7e2a7c12-8893-4e93-ac9b-f88730306c28",
->>>>>>> Stashed changes
                             TwoFactorEnabled = false,
                             UserName = "gwashington"
                         });
@@ -124,36 +114,6 @@ namespace AbetMvc.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Courses");
-                });
-
-            modelBuilder.Entity("AbetMvc.Models.CourseOutcomeMapping", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("CourseId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int?>("Major")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("OutcomeId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("Semester")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("Year")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CourseId");
-
-                    b.HasIndex("OutcomeId");
-
-                    b.ToTable("CourseOutcomeMappings");
                 });
 
             modelBuilder.Entity("AbetMvc.Models.Outcome", b =>
@@ -338,39 +298,6 @@ namespace AbetMvc.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-<<<<<<< Updated upstream
-=======
-            modelBuilder.Entity("AbetMvc.Models.CourseOutcomeMapping", b =>
-                {
-                    b.HasOne("AbetMvc.Models.Course", "Course")
-                        .WithMany()
-                        .HasForeignKey("CourseId");
-
-                    b.HasOne("AbetMvc.Models.Outcome", "Outcome")
-                        .WithMany()
-                        .HasForeignKey("OutcomeId");
-
-                    b.Navigation("Course");
-
-                    b.Navigation("Outcome");
-                });
-
-            modelBuilder.Entity("AbetMvc.Models.OutcomeResult", b =>
-                {
-                    b.HasOne("AbetMvc.Models.Outcome", "Outcome")
-                        .WithMany()
-                        .HasForeignKey("OutcomeId");
-
-                    b.HasOne("AbetMvc.Models.Section", "Section")
-                        .WithMany()
-                        .HasForeignKey("SectionId");
-
-                    b.Navigation("Outcome");
-
-                    b.Navigation("Section");
-                });
-
->>>>>>> Stashed changes
             modelBuilder.Entity("AbetMvc.Models.Section", b =>
                 {
                     b.HasOne("AbetMvc.Models.Course", "Course")
