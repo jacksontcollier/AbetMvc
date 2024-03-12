@@ -767,7 +767,25 @@ public static class SeedData
             CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome7, Major.EE, Semester.Fall, 2020);
             CreateCourseOutcomeMappingIfNotExist(context, eceDesignPracticum, eeOutcome7, Major.EE, Semester.Spring, 2021);
             // ** END   Seed CourseOutcomeMapping **//
- 
+
+            CreateAssessmentIfNotExist(context, gwSection2, csOutcome1, Major.CS, "Homeworks 1, 3 and 10", 20);
+            CreateAssessmentIfNotExist(context, gwSection2, csOutcome1, Major.CS, "Midterm questions on functional languages", 80);
+            CreateAssessmentIfNotExist(context, gwSection3, csOutcome2, Major.CS, "Homeworks 1, 2, and 3", 15);
+            CreateAssessmentIfNotExist(context, gwSection3, csOutcome2, Major.CS, "Exam #1", 10);
+            CreateAssessmentIfNotExist(context, gwSection3, csOutcome2, Major.CS, "Labs 1 and 6", 60);
+            CreateAssessmentIfNotExist(context, gwSection3, csOutcome2, Major.CS, "Project", 15);
+            CreateAssessmentIfNotExist(context, gwSection4, csOutcome1, Major.CS, "Finals", 30);
+            CreateAssessmentIfNotExist(context, gwSection4, csOutcome1, Major.CS, "Midterm 1 question", 10);
+            CreateAssessmentIfNotExist(context, bfSection1, csOutcome1, Major.CS, "Homework assignments 1 - 6", 10);
+            CreateAssessmentIfNotExist(context, bfSection1, csOutcome1, Major.CS, "Midterm 1", 30);
+            CreateAssessmentIfNotExist(context, bfSection2, cpeOutcome2, Major.CpE, "Final design document", 70);
+            CreateAssessmentIfNotExist(context, bfSection2, cpeOutcome2, Major.CpE, "Initial design document", 30);
+            CreateAssessmentIfNotExist(context, bfSection2, cpeOutcome1, Major.CpE, "Project Description", 50);
+            CreateAssessmentIfNotExist(context, bfSection2, cpeOutcome2, Major.CpE, "Project Implementation", 50);
+            CreateAssessmentIfNotExist(context, bfSection3, eeOutcome2, Major.EE, "Design of a circuit", 100);
+            CreateAssessmentIfNotExist(context, bfSection3, eeOutcome1, Major.EE, "midterm1", 20);
+            CreateAssessmentIfNotExist(context, bfSection3, eeOutcome1, Major.EE, "midterm3", 20);
+            CreateAssessmentIfNotExist(context, bfSection3, eeOutcome1, Major.EE, "midterm4", 30);
         }
     }
 
@@ -896,6 +914,23 @@ public static class SeedData
         };
 
         dbContext.CourseOutcomeMappings.Add(com);
+        dbContext.SaveChanges();
+    }
+
+    public static void CreateAssessmentIfNotExist(AbetMvcDbContext dbContext, Section section, Outcome outcome,
+        Major major, string description, int weight)
+    {
+        if (dbContext.Assessments.Where( a => ( ( a.Section.Id == section.Id &&
+            a.Outcome.Id == outcome.Id && a.Major == major && a.Description == description ))).Any())
+        {
+                return;
+        }
+
+        Assessment assessment = new Assessment{
+            Section=section,Outcome=outcome,Major=major,Description=description,Weight=weight
+        };
+
+        dbContext.Assessments.Add(assessment);
         dbContext.SaveChanges();
     }
 }
