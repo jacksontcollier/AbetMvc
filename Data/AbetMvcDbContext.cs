@@ -21,6 +21,10 @@ public class AbetMvcDbContext : IdentityDbContext<Instructor>
 
     public DbSet<OutcomeResult> OutcomeResults { get; set; }
 
+    public DbSet<CourseOutcomeMapping> CourseOutcomeMappings { get; set; }
+
+    public DbSet<Assessment> Assessments { get; set; }
+
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
